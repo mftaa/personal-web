@@ -1,11 +1,19 @@
+'use client';
 import React from 'react';
 import { portfolioData } from '../data/portfolio';
+import { motion } from 'framer-motion';
 
 export const Hero = () => {
   return (
-    <section className="relative flex flex-col-reverse md:flex-row md:w-full items-center justify-between min-h-[80vh] py-20 gap-10 overflow-hidden">
-
-      <div className="flex-1 flex flex-col items-start space-y-6 z-10">
+    <section className="relative flex flex-col-reverse md:flex-row items-center justify-between min-h-[80vh] py-20 gap-10 overflow-hidden">
+      <div className="section-blob bg-primary -top-20 -left-20"></div>
+      
+      <motion.div 
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="flex-1 flex flex-col items-start space-y-6 z-10"
+      >
         <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
           Hello, I'm <span className="text-primary">{portfolioData.personal.name}</span>
         </h1>
@@ -31,18 +39,23 @@ export const Hero = () => {
             Contact Me
           </a>
         </div>
-      </div>
+      </motion.div>
       
-      <div className="flex-1 flex justify-center ">
+      <motion.div 
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        className="flex-1 flex justify-center md:justify-end"
+      >
         <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96">
-          <div className="absolute inset-0 rounded-full blur-2xl transform translate-x-4 translate-y-4"></div>
+          <div className="absolute inset-0 bg-primary/20 rounded-full blur-2xl transform translate-x-4 translate-y-4"></div>
           <img
             src={portfolioData.personal.avatar}
             alt={portfolioData.personal.name}
             className="relative w-full h-full object-cover rounded-full border-4 border-white dark:border-zinc-900 shadow-2xl"
           />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
