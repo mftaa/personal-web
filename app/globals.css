@@ -3,11 +3,28 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Section Colors - Light Mode */
+  --primary: #4f46e5; /* Indigo - Hero */
+  --primary-foreground: #ffffff;
+  
+  --section-skills: #059669; /* Emerald */
+  --section-timeline: #e11d48; /* Rose */
+  --section-projects: #0284c7; /* Sky */
+  --section-achievements: #d97706; /* Amber */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  
+  --color-skills: var(--section-skills);
+  --color-timeline: var(--section-timeline);
+  --color-projects: var(--color-projects);
+  --color-achievements: var(--section-achievements);
+  
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -16,6 +33,13 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    
+    /* Section Colors - Dark Mode (Slightly lighter/vibrant) */
+    --primary: #818cf8;
+    --section-skills: #34d399;
+    --section-timeline: #fb7185;
+    --section-projects: #38bdf8;
+    --section-achievements: #fbbf24;
   }
 }
 
@@ -23,4 +47,14 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.section-blob {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  filter: blur(80px);
+  opacity: 0.15;
+  z-index: -1;
 }
