@@ -2,9 +2,6 @@
 
 A modern, responsive, and animated personal portfolio website built with the latest web technologies. This project showcases my skills, experience, and projects as an Undergraduate Computer Engineering Student.
 
-![Portfolio Preview](public/surur.JPG) 
-*(Note: Replace this with a screenshot of your actual landing page)*
-
 ## 🚀 Tech Stack
 
 *   **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
