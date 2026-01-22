@@ -48,7 +48,7 @@ export const Hero = () => {
         className="flex-1 flex justify-center md:justify-end"
       >
         <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96">
-          <div className="absolute inset-0 bg-primary/20 rounded-full blur-2xl transform translate-x-4 translate-y-4"></div>
+          <div className="absolute inset-0 rounded-full blur-2xl transform translate-x-4 translate-y-4"></div>
           <img
             src={portfolioData.personal.avatar}
             alt={portfolioData.personal.name}
